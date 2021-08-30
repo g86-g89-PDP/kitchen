@@ -45,20 +45,75 @@ const Homes = () => {
                         </div>
                     </div>
                     <div className='todoAppCard'>
-                        <div className='d-flex p-2'>
+                        <div className='d-flex p-2 align-items-center'>
+
                             <img src="meal1.jpg" alt="rasm"  className='todoImg' />
+
                             <div className='sozlar'>
-                                <p className='text-light mb-0 pb-0'>Spicy seasoned sea...</p>
+                                <div className="h-100">
+                                    <p className='text-light mb-0 pb-0'>Spicy seasoned sea...</p>
                                 <p className='imgword2'>$ 2.29</p>
+                                </div>
                             </div>
-                            <div className='todoInput'>
+                          
+
+                            <div className='todoInput '>
                                 <input type="text" placeholder='2' className='form-control inp' />
                                 <p className='text-light mt-3'>$4.58</p>
                             </div>
+
                         </div>
-                        <div className='d-flex'>
-                            <input type="text" className='form-control inp' placeholder='This meal !' />
+                        <div className='d-flex w-100'>
+                            <input type="text" className='form-control inp2' placeholder='This meal !' />
                             <button className='btn deleteBtn'><RiDeleteBin7Line/></button>
+
+                        </div>
+
+                        <div className='d-flex p-2 align-items-center'>
+
+                        <img src="meal1.jpg" alt="rasm"  className='todoImg' />
+
+                        <div className='sozlar'>
+                            <div className="h-100">
+                                <p className='text-light mb-0 pb-0'>Spicy seasoned sea...</p>
+                            <p className='imgword2'>$ 2.29</p>
+                            </div>
+                        </div>
+
+
+                        <div className='todoInput '>
+                            <input type="text" placeholder='2' className='form-control inp' />
+                            <p className='text-light mt-3'>$4.58</p>
+                        </div>
+
+                        </div>
+                        <div className='d-flex w-100'>
+                        <input type="text" className='form-control inp2' placeholder='This meal !' />
+                        <button className='btn deleteBtn'><RiDeleteBin7Line/></button>
+
+                        </div>
+
+                        <div className='d-flex p-2 align-items-center'>
+
+                        <img src="meal1.jpg" alt="rasm"  className='todoImg' />
+
+                        <div className='sozlar'>
+                            <div className="h-100">
+                                <p className='text-light mb-0 pb-0'>Spicy seasoned sea...</p>
+                            <p className='imgword2'>$ 2.29</p>
+                            </div>
+                        </div>
+
+
+                        <div className='todoInput '>
+                            <input type="text" placeholder='2' className='form-control inp' />
+                            <p className='text-light mt-3'>$4.58</p>
+                        </div>
+
+                        </div>
+                        <div className='d-flex w-100'>
+                        <input type="text" className='form-control inp2' placeholder='This meal !' />
+                        <button className='btn deleteBtn'><RiDeleteBin7Line/></button>
 
                         </div>
 

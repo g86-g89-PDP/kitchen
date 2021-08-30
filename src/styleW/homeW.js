@@ -79,15 +79,17 @@ const Home=styled.div`
         color: #EA7C69;
         font-weight: 600;
         font-size: 10px;
-        padding: 0 !important;
-        margin: 0 !important;
+        padding: 0 0 0 0 !important;
+        margin: 0 0 0 0 !important;
         width: 50%;
+
     }
     .MuiTabs-flexContainer{
         background: #2D303E;
         box-shadow: none !important;
         padding: 0 !important;
         margin: 0 !important;
+        
     }
     .MuiBox-root{
         background: #2D303E;
@@ -175,20 +177,34 @@ const Home=styled.div`
         height: 30px;
         object-fit: cover;
         border-radius: 50%;
-        margin-top: 5px;
+        margin-bottom: 5px;
     }
     .todoInput{
         width:150px;
-        display:flex;  
-        align-items:center;    
+        display:flex; 
+        align-items:center ;
+   
     }
     .inp{
-            width: 100%;
+            width: 40px;
+            height:40px;
             background: #2D303E;
             border: 1px solid #393C49;
             box-sizing: border-box;
             border-radius: 8px;
             margin: 5px;
+            color:white;
+
+        }
+        .inp2{
+            width: 100%;
+            height:40px;
+            background: #2D303E;
+            border: 1px solid #393C49;
+            box-sizing: border-box;
+            border-radius: 8px;
+            margin: 5px;
+            color:white;
         }
     .todoAppCard{
         .imgword2{
@@ -202,6 +218,10 @@ const Home=styled.div`
         .sozlar{
             padding: 0 5px;
             width: 100%;
+            display:flex;
+            align-items: center !important;
+            height:100%;
+            margin-top: 10px;
         }
 
     }
