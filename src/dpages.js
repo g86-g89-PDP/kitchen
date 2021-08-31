@@ -4,6 +4,7 @@ import Home from './pages/home';
 import Orders from './pages/orders';
 import Tel from './pages/tel';
 import { useParams } from 'react-router-dom';
+import Settings from './pages/settings';
 
 const Dpages = () => {
     const { pages } = useParams();
@@ -16,6 +17,11 @@ const Dpages = () => {
           case "orders":
             return <Orders />;
             break;
+
+          case "settings":
+            return <Settings />;
+            break;
+
           case "tel":
             return <Tel />;
             break;
