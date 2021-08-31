@@ -46,22 +46,28 @@ const Homes = () => {
       <div className="rightPage1">
         <p className="topWord">Orders #34562</p>
         <div className="d-flex justif-content-start">
-          <div>
+          <div className="d-flex">
             <button className="btn btnLight mb-3">Dine In</button>
             <button className="btn btnDark mb-3">To Go</button>
-            <SideSheet
-              isShown={isShown}
-              onCloseComplete={() => setIsShown(false)}
-              preventBodyScrolling
-            >
-              <Paragraph margin={40}>Basic Example</Paragraph>
-            </SideSheet>
-            <Button
-              className="btn btnDark mb-3"
-              onClick={() => setIsShown(true)}
-            >
-              Payment
-            </Button>
+            <div>
+              <SideSheet
+                isShown={isShown}
+                onCloseComplete={() => setIsShown(false)}
+                preventBodyScrollin
+              >
+                <div className="payment h-100">
+                  <div className="container py-5">
+                    <h2>Payment</h2>
+                  </div>
+                </div>
+              </SideSheet>
+              <Button
+                className="btn btnDark mb-3"
+                onClick={() => setIsShown(true)}
+              >
+                Payment
+              </Button>
+            </div>
           </div>
         </div>
         <div className="d-flex justify-content-between jkl text-light">
