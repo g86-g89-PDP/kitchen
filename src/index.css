@@ -1,4 +1,11 @@
-body {
-  box-sizing: border-box;
+.payment {
+  background-color: #1f1d2b !important;
+  color: #fff;
 }
-
+.MuiTabs-scroller {
+  overflow-x: scroll !important;
+}
+.MuiTabs-scrollable::-webkit-scrollbar {
+  display: block !important;
+  width: 10px !important;
+}

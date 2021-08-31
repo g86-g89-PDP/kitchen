@@ -11,6 +11,10 @@ const Home = styled.div`
     background-color: #1f1d2b !important;
     padding: 14px;
 
+    .ub-w_620px {
+      width: 320px !important;
+    }
+
     .topWord {
       font-style: normal;
       font-weight: 600;
