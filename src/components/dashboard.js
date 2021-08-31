@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { MainW } from '../styleW/allWrapper'
+import { AiOutlineHome } from "react-icons/ai";
 
 const Header = () => {
     return (
@@ -10,7 +11,7 @@ const Header = () => {
                 <ul>
                     <li>
                         <Link to='/'>
-                        <p>Home</p>
+                        <p><AiOutlineHome/></p>
                         </Link>
                     </li>
                     <li>
