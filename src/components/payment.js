@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { React, SideSheet, Paragraph, Button } from "evergreen-ui";
+import { SideSheet, Paragraph, Button } from "evergreen-ui";
 
 function PreventBodyScrollingSidesheetExample() {
   const [isShown, setIsShown] = React.useState(false);
