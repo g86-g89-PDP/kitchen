@@ -7,11 +7,14 @@ import {
 import Home from "./pages/home";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dpages from "./dpages";
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 function App() {
   return (
     <div>
-      <Router>
+       <Provider store={store}>
+          <Router>
       <Switch>
          <Route path="/" exact>
            <Redirect to="/home"/>
@@ -22,6 +25,8 @@ function App() {
           </Route>
         </Switch>
         </Router>
+       </Provider>
+     
       
     </div>
   );

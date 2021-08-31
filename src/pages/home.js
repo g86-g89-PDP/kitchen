@@ -2,9 +2,18 @@ import { Home } from '../styleW/homeW';
 import React from 'react'
 import Home2 from './../components/home2'
 import { RiDeleteBin7Line } from "react-icons/ri";
+import { useDispatch, useSelector } from 'react-redux';
 
 
 const Homes = () => {
+    const dispatch = useDispatch();
+    const dine = useSelector(state => state.dine);
+
+    const Delet =(i)=>{
+        const action = { type: "DELETE", payload: i };
+        console.log(i);
+        dispatch(action);
+    }
 
     const [value, setValue] = React.useState(2);
 
@@ -12,6 +21,8 @@ const Homes = () => {
       setValue(newValue);
     };
     const vaqt= new Date();
+
+
     return (
         <Home>
          
@@ -45,78 +56,32 @@ const Homes = () => {
                         </div>
                     </div>
                     <div className='todoAppCard'>
-                        <div className='d-flex p-2 align-items-center'>
-
-                            <img src="meal1.jpg" alt="rasm"  className='todoImg' />
-
-                            <div className='sozlar'>
-                                <div className="h-100">
-                                    <p className='text-light mb-0 pb-0'>Spicy seasoned sea...</p>
-                                <p className='imgword2'>$ 2.29</p>
+                          {/* bosghlanish */}
+                          {dine?.map((v,i)=>{
+                              return    <div key={i}>
+                              <div className='d-flex p-2 align-items-center'>
+                                    <img src={v.img} alt="rasm"  className='todoImg' />
+                                    <div className='sozlar'>
+                                        <div className="h-100">
+                                            <p className='text-light mb-0 pb-0'>{v.name}</p>
+                                        <p className='imgword2'>{v.price}</p>
+                                        </div>
+                                    </div>      
+                                    <div className='todoInput '>
+                                        <input type="text" placeholder='2' className='form-control inp' />
+                                        <p className='text-light mt-3'>{v.price2}</p>
+                                    </div>
                                 </div>
-                            </div>
-                          
+                                <div className='d-flex w-100'>
+                                    <input type="text" className='form-control inp2' placeholder={v.value} />
+                                    <button className='btn deleteBtn' onClick={()=>Delet(i)}><RiDeleteBin7Line/></button>
+                                </div>
+                              </div>
+                          })}
+                   
+                         {/* tugashi */}
 
-                            <div className='todoInput '>
-                                <input type="text" placeholder='2' className='form-control inp' />
-                                <p className='text-light mt-3'>$4.58</p>
-                            </div>
-
-                        </div>
-                        <div className='d-flex w-100'>
-                            <input type="text" className='form-control inp2' placeholder='This meal !' />
-                            <button className='btn deleteBtn'><RiDeleteBin7Line/></button>
-
-                        </div>
-
-                        <div className='d-flex p-2 align-items-center'>
-
-                        <img src="meal1.jpg" alt="rasm"  className='todoImg' />
-
-                        <div className='sozlar'>
-                            <div className="h-100">
-                                <p className='text-light mb-0 pb-0'>Spicy seasoned sea...</p>
-                            <p className='imgword2'>$ 2.29</p>
-                            </div>
-                        </div>
-
-
-                        <div className='todoInput '>
-                            <input type="text" placeholder='2' className='form-control inp' />
-                            <p className='text-light mt-3'>$4.58</p>
-                        </div>
-
-                        </div>
-                        <div className='d-flex w-100'>
-                        <input type="text" className='form-control inp2' placeholder='This meal !' />
-                        <button className='btn deleteBtn'><RiDeleteBin7Line/></button>
-
-                        </div>
-
-                        <div className='d-flex p-2 align-items-center'>
-
-                        <img src="meal1.jpg" alt="rasm"  className='todoImg' />
-
-                        <div className='sozlar'>
-                            <div className="h-100">
-                                <p className='text-light mb-0 pb-0'>Spicy seasoned sea...</p>
-                            <p className='imgword2'>$ 2.29</p>
-                            </div>
-                        </div>
-
-
-                        <div className='todoInput '>
-                            <input type="text" placeholder='2' className='form-control inp' />
-                            <p className='text-light mt-3'>$4.58</p>
-                        </div>
-
-                        </div>
-                        <div className='d-flex w-100'>
-                        <input type="text" className='form-control inp2' placeholder='This meal !' />
-                        <button className='btn deleteBtn'><RiDeleteBin7Line/></button>
-
-                        </div>
-
+                      
                     </div>
                 </div>
         

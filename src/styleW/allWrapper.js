@@ -11,6 +11,9 @@ const MainW=styled.div`
         width: 100px;
         min-height: 100vh;
         background: #1F1D2B;
+        position: sticky !important;
+        top: 0;
+        left:0;
         ul{
             list-style-type: none;
             padding: 0;

@@ -5,6 +5,7 @@ import { MainW } from '../styleW/allWrapper'
 const Header = () => {
     return (
         <MainW>
+            <div>
             <div className='dashboard'>
                 <ul>
                     <li>
@@ -19,6 +20,7 @@ const Header = () => {
                         </Link>
                     </li>
                 </ul>
+            </div>
             </div>
         </MainW>
     )

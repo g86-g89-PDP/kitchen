@@ -6,6 +6,14 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import ColdDish from '../meals/hot';
+import Cold from '../meals/cold';
+import Soup from '../meals/soup';
+import Grill from '../meals/grill';
+
+
+
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -75,62 +83,17 @@ export default function SimpleTabs() {
       </div>
     
       <TabPanel value={value} index={0}>
-       <div className="row">
-         <div className="col-lg-4 col-md-6 col-sm-12">
-         <div className='imgCard1'>
-             <div className='imgCard2'>
-               <img src="meal1.jpg" alt="" className='Img' />
-
-              <div className='infMeal'>
-                  <p className='imgword1 text-center'>Spicy seasoned seafood noodles</p>
-                  <p className='imgword1'>$ 2.29</p>
-                  <p className='imgword2'>20 Bowls available</p>   
-              </div>
-
-             </div>
-           </div>
-         </div>
-
-         <div className="col-lg-4 col-md-6 col-sm-12">
-         <div className='imgCard1'>
-             <div className='imgCard2'>
-               <img src="meal1.jpg" alt="" className='Img' />
-
-              <div className='infMeal'>
-                  <p className='imgword1 text-center'>Spicy seasoned seafood noodles</p>
-                  <p className='imgword1'>$ 2.29</p>
-                  <p className='imgword2'>20 Bowls available</p>   
-              </div>
-
-             </div>
-           </div>
-         </div>
-         
-         <div className="col-lg-4 col-md-6 col-sm-12">
-         <div className='imgCard1'>
-             <div className='imgCard2'>
-               <img src="meal1.jpg" alt="" className='Img' />
-
-              <div className='infMeal'>
-                  <p className='imgword1 text-center'>Spicy seasoned seafood noodles</p>
-                  <p className='imgword1'>$ 2.29</p>
-                  <p className='imgword2'>20 Bowls available</p>   
-              </div>
-
-             </div>
-           </div>
-         </div>
-
-       </div>
+        <ColdDish></ColdDish>
+      
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+       <Cold></Cold>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <Soup></Soup>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Item Three
+        <Grill></Grill>
       </TabPanel>
       <TabPanel value={value} index={4}>
         Item Three
