@@ -3,7 +3,7 @@ import React from "react";
 import Home2 from "./../components/home2";
 import { RiDeleteBin7Line } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
-import Payment from "../components/payment";
+import { Button, Paragraph, SideSheet } from "evergreen-ui";
 
 const Homes = () => {
   const dispatch = useDispatch();
@@ -21,6 +21,8 @@ const Homes = () => {
     setValue(newValue);
   };
   const vaqt = new Date();
+
+  const [isShown, setIsShown] = React.useState(false);
 
   return (
     <Home>
@@ -45,11 +47,21 @@ const Homes = () => {
         <p className="topWord">Orders #34562</p>
         <div className="d-flex justif-content-start">
           <div>
-            <button className="btn btnLight">Dine In</button>
-            <button className="btn btnDark">To Go</button>
-            <button className="btn btnDark">
-              <Payment />
-            </button>
+            <button className="btn btnLight mb-3">Dine In</button>
+            <button className="btn btnDark mb-3">To Go</button>
+            <SideSheet
+              isShown={isShown}
+              onCloseComplete={() => setIsShown(false)}
+              preventBodyScrolling
+            >
+              <Paragraph margin={40}>Basic Example</Paragraph>
+            </SideSheet>
+            <Button
+              className="btn btnDark mb-3"
+              onClick={() => setIsShown(true)}
+            >
+              Payment
+            </Button>
           </div>
         </div>
         <div className="d-flex justify-content-between jkl text-light">
