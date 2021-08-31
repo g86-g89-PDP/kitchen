@@ -108,7 +108,4 @@ h6 {
 .MuiTabs-scroller {
   overflow-x: scroll !important;
 }
-.MuiTabs-scrollable::-webkit-scrollbar {
-  display: block !important;
-  width: 10px !important;
-}
+
