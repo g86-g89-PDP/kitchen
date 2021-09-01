@@ -1,42 +1,42 @@
-import React from 'react'
-import All from './components/all';
-import Home from './pages/home';
-import Orders from './pages/orders';
-import Tel from './pages/tel';
-import { useParams } from 'react-router-dom';
-import Settings from './pages/settings';
+import React from "react";
+import All from "./components/all";
+import Home from "./pages/home";
+import Orders from "./pages/orders";
+import Tel from "./pages/tel";
+import { useParams } from "react-router-dom";
+import Settings from "./pages/settings";
+import Dashboards from "./pages/dashboards";
 
 const Dpages = () => {
-    const { pages } = useParams();
+  const { pages } = useParams();
 
-    const Pages = (pages) => {
-        switch (pages) {
-          case "home":
-            return <Home />;
-            break;
-          case "orders":
-            return <Orders />;
-            break;
+  const Pages = (pages) => {
+    switch (pages) {
+      case "home":
+        return <Home />;
+        break;
+      case "orders":
+        return <Orders />;
+        break;
 
-          case "settings":
-            return <Settings />;
-            break;
+      case "settings":
+        return <Settings />;
+        break;
+      case "dashboards":
+        return <Dashboards />;
+        break;
 
-          case "tel":
-            return <Tel />;
-            break;
-    
-          default:
-            return <Home />;
-        }
-    };
+      case "tel":
+        return <Tel />;
+        break;
+
+      default:
+        return <Home />;
+    }
+  };
 
   console.log(pages);
-    return (
-        <All>
-            {Pages(pages)}
-        </All>
-    )
-}
+  return <All>{Pages(pages)}</All>;
+};
 
-export default Dpages
+export default Dpages;
