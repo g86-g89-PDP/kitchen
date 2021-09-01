@@ -97,6 +97,31 @@ const Home = styled.div`
   .PrivateTabIndicator-root-2 {
     background: #ea7c69;
   }
+  .MuiTabs-scroller{
+    background-color: #2d303e;
+    width: 5px !important;
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 20px;
+    }
+
+    /* Track */
+    .MuiTabs-scrollable::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 10px !important;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #1F1D2B;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar {
+      display: block !important;
+      width: 3px !important;
+    }
+  }
   .imgCard1 {
     margin: 10px 50px 10px 50px;
     padding: 20px 0 0 0;

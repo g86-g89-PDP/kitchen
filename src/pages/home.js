@@ -3,9 +3,51 @@ import React from "react";
 import Home2 from "./../components/home2";
 import { RiDeleteBin7Line } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
-import { Button, Paragraph, SideSheet } from "evergreen-ui";
+import { Button, SideSheet } from "evergreen-ui";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCreditCard,
+  faPlus,
+  faWallet,
+} from "@fortawesome/free-solid-svg-icons";
+import { faPaypal } from "@fortawesome/free-brands-svg-icons";
 
-const Homes = () => {
+const confirmation = [
+  {
+    id: "2",
+    img: "https://pinchofyum.com/wp-content/uploads/Healing-Chicken-and-Rice-Soup-Square.jpg",
+    title: "Spicy seasoned sea...",
+    price: "$ 2.29",
+    subprice: "$ 4,58",
+    placeholder: "Order Note...",
+  },
+  {
+    id: "1",
+    img: "https://uploads-ssl.webflow.com/598a208f22e8860001acd449/5dc70282c1b1603712682357_Lemon-Chicken-Soup-Square.jpg",
+    title: "Salted pasta with mu...",
+    price: "$ 2.69",
+    subprice: "$ 2.69",
+    placeholder: "Order Note...",
+  },
+  {
+    id: "3",
+    img: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2019%2F02%2F26%2Flemony-greek-chicken-soup-1811-p16-2000.jpg",
+    title: "Spicy instant noodle...",
+    price: "$ 2.29",
+    subprice: "$ 4,58",
+    placeholder: "Order Note...",
+  },
+  {
+    id: "1",
+    img: "https://simply-delicious-food.com/wp-content/uploads/2018/01/easy-vegetable-soup-1.jpg",
+    title: "Healthy noodle with ...",
+    price: "$ 2.29",
+    subprice: "$ 4,58",
+    placeholder: "Order Note...",
+  },
+];
+
+const Homes = (props) => {
   const dispatch = useDispatch();
   const dine = useSelector((state) => state.dine);
 
@@ -46,22 +88,199 @@ const Homes = () => {
       <div className="rightPage1">
         <p className="topWord">Orders #34562</p>
         <div className="d-flex justif-content-start">
-          <div>
+          <div className="d-flex">
             <button className="btn btnLight mb-3">Dine In</button>
             <button className="btn btnDark mb-3">To Go</button>
-            <SideSheet
-              isShown={isShown}
-              onCloseComplete={() => setIsShown(false)}
-              preventBodyScrolling
-            >
-              <Paragraph margin={40}>Basic Example</Paragraph>
-            </SideSheet>
-            <Button
-              className="btn btnDark mb-3"
-              onClick={() => setIsShown(true)}
-            >
-              Payment
-            </Button>
+
+            {/* Payment start */}
+            <div>
+              <SideSheet
+                isShown={isShown}
+                onCloseComplete={() => setIsShown(false)}
+                preventBodyScrollin
+              >
+                <div className="payment h-100">
+                  <div className="container py-3">
+                    <div className="row">
+                      <div className="col-md-6 leftSidebar">
+                        <div className="py-3 bord">
+                          <div className="d-flex justify-content-between">
+                            <h3>Confirmation</h3>
+
+                            <button className="btn plus py-0">
+                              <FontAwesomeIcon
+                                className="text-white"
+                                icon={faPlus}
+                              />
+                            </button>
+                          </div>
+                          <small className="text-muted">Orders #34562</small>
+                        </div>
+                        <div className="bord">
+                          {confirmation.map((v, i) => {
+                            return (
+                              <div key={i}>
+                                <div className="d-flex">
+                                  <div className="my-3">
+                                    <div className="d-flex justify-content-between">
+                                      <div className="d-flex mb-2 pe-5">
+                                        <img
+                                          src={v.img}
+                                          className="images me-2"
+                                          alt="not photo"
+                                        />
+                                        <div>
+                                          <p className="mb-0">{v.title}</p>
+                                          <small className="text-muted">
+                                            {v.price}
+                                          </small>
+                                        </div>
+                                      </div>
+                                      <div className="div me-3">{v.id}</div>
+                                      <p className="d-flex justify-content-center align-items-center">
+                                        {v.subprice}
+                                      </p>
+                                    </div>
+
+                                    <div className="d-flex justify-content-between">
+                                      <input
+                                        type="text"
+                                        className="input pe-5"
+                                        placeholder={v.placeholder}
+                                      />
+                                      <button
+                                        className="btn delete"
+                                        onClick={() => Delet(i)}
+                                      >
+                                        <RiDeleteBin7Line className="icons" />
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                        <div className="d-flex justify-content-between mt-2">
+                          <p className="text-muted">Discount</p>
+                          <p>$0</p>
+                        </div>
+                        <div className="d-flex justify-content-between mt-2">
+                          <p className="text-muted">Sub total</p>
+                          <p> $ 21,03</p>
+                        </div>
+                      </div>
+
+                      <div className="col-md-6 px-3 rightSidebar">
+                        <div className="bord py-3">
+                          <h3>Payment</h3>
+                          <small className="text-muted">
+                            3 payment method available
+                          </small>
+                        </div>
+                        <div className="py-2">
+                          <h5>Payment Method</h5>
+                          <div className="row">
+                            <div className="col-12 col-sm-12 col-md-4">
+                              <button className="btn border text-white mt-2">
+                                <FontAwesomeIcon icon={faCreditCard} />
+                                <p className="mb-0">Credit Card</p>
+                              </button>
+                            </div>
+                            <div className="col-12 col-sm-12 col-md-4">
+                              <button className="btn border text-white mt-2">
+                                <FontAwesomeIcon icon={faPaypal} />
+                                <p className="mb-0">Credit Card</p>
+                              </button>
+                            </div>
+                            <div className="col-12 col-sm-12 col-md-4">
+                              <button className="btn border text-white mt-2">
+                                <FontAwesomeIcon icon={faWallet} />
+                                <p className="mb-0">Credit Card</p>
+                              </button>
+                            </div>
+                          </div>
+                          <div className="mt-2">
+                            <h6>Cardholder Name</h6>
+                            <input
+                              type="text"
+                              className="input pe-5 ps-2 py-2"
+                              placeholder="Levi Ackerman"
+                            />
+                            <h6 className="mt-2">Card Number</h6>
+                            <input
+                              type="text"
+                              className="input pe-5 ps-2 py-2"
+                              placeholder="2564 1421 0897 1244"
+                            />
+                            <div className="row mt-2 pb-3 bord">
+                              <div className="col-12 col-sm-12 col-md-6">
+                                <div className="pe-2">
+                                  <h6>Expiration Date</h6>
+                                  <input
+                                    type="date"
+                                    className="input02 pe-5 ps-2 py-2"
+                                    placeholder="02/2022"
+                                  />
+                                </div>
+                              </div>
+                              <div className="col-12 col-sm-12 col-md-6">
+                                <div>
+                                  <h6>CVV</h6>
+                                  <input
+                                    type="password"
+                                    className="input02 pe-5 ps-2 py-2"
+                                    placeholder="as2B34"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="row mt-2">
+                              <div className="col-12 col-sm-12 col-md-6">
+                                <div className="pe-2">
+                                  <h6>Order Type</h6>
+                                  <input
+                                    type="tel"
+                                    className="input02 pe-5 ps-2 py-2"
+                                    placeholder="Dine In"
+                                  />
+                                </div>
+                              </div>
+                              <div className="col-12 col-sm-12 col-md-6">
+                                <div>
+                                  <h6>Table no.</h6>
+                                  <input
+                                    type="text"
+                                    className="input02 pe-5 ps-2 py-2"
+                                    placeholder="as2B34"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div className="d-flex buttonGroup">
+                              <button className="btn w-100 me-2 lightBtn py-2">
+                                Cancel
+                              </button>
+                              <button className="btn w-100 lightBtn py-2">
+                                Confirm Payment
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SideSheet>
+              <Button
+                className="btn btnDark mb-3"
+                onClick={() => setIsShown(true)}
+              >
+                Payment
+              </Button>
+            </div>
+            {/* Payment end */}
           </div>
         </div>
         <div className="d-flex justify-content-between jkl text-light">
@@ -72,7 +291,7 @@ const Homes = () => {
           </div>
         </div>
         <div className="todoAppCard">
-          {/* bosghlanish */}
+          {/* boshlanish */}
           {dine?.map((v, i) => {
             return (
               <div key={i}>
