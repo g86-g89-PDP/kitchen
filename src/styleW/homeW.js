@@ -251,5 +251,30 @@ const Home = styled.div`
     border: 1px solid #ff7ca3;
     color: #ff7ca3;
   }
+  
+@media screen and (max-width:600px){
+  &{
+    display: block;
+    width:100%;
+  }
+  .rightPage1 {
+    width: 400px !important;
+    background-color: #1f1d2b !important;
+    padding: 14px 35px 14px 14px;
+    max-height: 300px;
+  }
+
+    .todoAppCard {
+    max-height: 200px;
+    overflow-y: auto;
+    }
+    .kkk{
+      padding-right: 30px !important;
+    }
+    .homeHead{
+    
+      flex: 0;
+    }
+}
 `;
 export { Home };

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const MainW=styled.div`
+const MainW = styled.div`
     display: flex;
     transition: 0.3s;
 
@@ -32,6 +32,14 @@ const MainW=styled.div`
                     width: 56px;
                     height: 56px;
                     color: #1F1D2B;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    p{
+                        font-size: 25px;
+                        padding: 0 0 5px 0;
+                        margin: 0 !important;
+                    }
                 }
                 a{
                     text-decoration: none;
@@ -54,7 +62,35 @@ const MainW=styled.div`
         background: #2D303E;
 
     }
+    
+    @media screen and (max-width:600px){
+        &{
+            display: block;
+            overflow-x: hidden;
+        }
+
+        .dashboard{
+        min-width: 100% !important;
+        min-height: 100px !important;
+        overflow-x: auto;
+        ul{
+            display: flex;
+            li{
+                margin:0 10px;
+            }
+           
+        }
+
+
+    }
+    .rightPage{
+        flex: 1;
+        min-width: 100% !important;
+        background: #2D303E;
+
+    }
+    }
 
 
 `;
-export {MainW}
+export { MainW }

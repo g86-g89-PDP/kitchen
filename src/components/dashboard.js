@@ -11,7 +11,9 @@ const Header = () => {
           <ul>
             <li>
               <Link to="/">
-                <p>Home</p>
+                <div className='dashboardSm'>
+                  <p><AiOutlineHome /></p>
+                </div>
               </Link>
             </li>
             <li>
@@ -21,7 +23,9 @@ const Header = () => {
             </li>
             <li>
               <Link to="/settings">
-                <p>Settings</p>
+                <div className='dashboardSm'>
+                  <p><AiOutlineSetting /></p>
+                </div>
               </Link>
             </li>
             <li>

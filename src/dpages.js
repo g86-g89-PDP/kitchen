@@ -6,6 +6,7 @@ import Tel from "./pages/tel";
 import { useParams } from "react-router-dom";
 import Settings from "./pages/settings";
 import Dashboards from "./pages/dashboards";
+import Error from "./components/error";
 
 const Dpages = () => {
   const { pages } = useParams();
@@ -31,7 +32,7 @@ const Dpages = () => {
         break;
 
       default:
-        return <Home />;
+        return <Error />;
     }
   };
 
