@@ -5,13 +5,7 @@ export const SettingsWrapper = styled.div`
   
     overflow-x: hidden !important;
     margin: 10px;
-    .Manage{
-        display: flex;
-        .controlIcon{
-            margin: 2px 4px 4px 4px;
-            font-size: 20px;
-        }
-    }
+   
     .settings{
         background-color: #1F1D2B;
         border-radius: 15px;
@@ -27,7 +21,6 @@ export const SettingsWrapper = styled.div`
             }
             .menuName{
                 display: flex !important;
-                align-items: center !important;
             }
           
             .menuText{
@@ -42,5 +35,45 @@ export const SettingsWrapper = styled.div`
     .MuiAppBar-colorPrimary{
         background-color: #1F1D2B !important;
     }
-    
+    .active{
+        background-color: #54353B;
+        border-right: 4px solid #EA7C69;
+        .Discourse{
+            color: #EA7C69;
+        }
+        h5{
+            color: #EA7C69;
+        }
+    }   
+    .Management{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .Products{
+        border-radius: 15px;
+        padding: 10px;
+        h3{
+            color: white;
+        }
+        .Manage{
+        display: flex;
+        align-items: center;
+        border: 1px solid white;
+        border-radius: 10px;
+        padding: 0 10px 0 10px;
+        cursor: pointer;
+        p{
+            padding-top: 12px;
+        }
+        .controlIcon{
+            margin: 2px 4px 4px 4px;
+            font-size: 20px;
+        }
+    }
+    }
+    .MuiTab-root{
+        min-width: 150px;
+    }
+
 `;
