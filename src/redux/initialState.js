@@ -34,14 +34,14 @@ const initialState = {
       price: "$2.60",
       price2: "$4.58",
       value: "this meal !",
-      img: "https://5.imimg.com/data5/DD/PN/EJ/SELLER-40061058/meals-jpg-500x500.jpg",
+      img: "https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/cetahkvrdg4quk6weyvy",
     },
     {
       name: "cold Dish3",
       price: "$2.60",
       price2: "$4.58",
       value: "this meal !",
-      img: "https://5.imimg.com/data5/DD/PN/EJ/SELLER-40061058/meals-jpg-500x500.jpg",
+      img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-pea-risotto-a4d4130.jpg?quality=90&resize=768,574",
     },
   ],
   cold: [
