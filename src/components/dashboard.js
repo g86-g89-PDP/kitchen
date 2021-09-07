@@ -2,6 +2,9 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { MainW } from "../styleW/allWrapper";
 import { AiOutlineHome, AiOutlineSetting } from "react-icons/ai";
+import { IoIosAddCircleOutline, IoIosBarcode } from "react-icons/io";
+
+
 
 const Header = () => {
   return (
@@ -18,7 +21,9 @@ const Header = () => {
             </li>
             <li>
               <Link to="/orders">
-                <p>Orders</p>
+                <div className="dashboardSm">
+                  <p><IoIosAddCircleOutline /></p>
+                </div>
               </Link>
             </li>
             <li>
@@ -30,7 +35,9 @@ const Header = () => {
             </li>
             <li>
               <Link to="/dashboards">
-                <p>Dashboards</p>
+                <div className="dashboardSm">
+                  <p><IoIosBarcode /></p>
+                </div>
               </Link>
             </li>
           </ul>

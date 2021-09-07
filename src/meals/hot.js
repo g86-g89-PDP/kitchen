@@ -8,7 +8,7 @@ const ColdDish = () => {
              <div className="row">
         
             {dine.map((v,i)=>{
-             return  <div className="col-lg-4 col-md-6 col-sm-12" key={i}> 
+             return  <div className="col-lg-4 col-md-6 col-sm-12  ps-0" key={i}> 
               <div className='imgCard1'>
              <div className='imgCard2'>
                <img src={v.img} alt="" className='Img' />

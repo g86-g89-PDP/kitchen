@@ -251,30 +251,86 @@ const Home = styled.div`
     border: 1px solid #ff7ca3;
     color: #ff7ca3;
   }
+  .onTop2{
+    display: flex;
+    justify-content: space-between;
+  }
+ 
+  @media screen and (max-width:390px){
+    .rightPage1 {
+    padding-right: 40px; 
+    }
+  }
+
   
-@media screen and (max-width:600px){
+@media screen and (max-width:1030px){
   &{
     display: block;
     width:100%;
   }
   .rightPage1 {
-    width: 400px !important;
-    background-color: #1f1d2b !important;
-    padding: 14px 35px 14px 14px;
-    max-height: 300px;
+    min-height: 60% !important;
+    min-width: 100% !important;
+    
+  }
+  .homeHeadSm {
+      display: block !important;
+      padding:10px 0;
+      text-align: center;
+    .HeaderInp{
+      text-align: center;
+      width: 50%;
+      color: white;
+    }
+    .HeaderInpCard{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 5px;
+     
+    }
+  }
+  .onTop2{
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
   }
 
-    .todoAppCard {
-    max-height: 200px;
+  .todoAppCard {
+    max-height: 300px;
     overflow-y: auto;
-    }
-    .kkk{
-      padding-right: 30px !important;
-    }
-    .homeHead{
-    
-      flex: 0;
-    }
+  }
+  .kkk{
+    width:100% !important; 
+    padding-right: 20px !important;
+    padding-left: 0 !important;
+
+  }
+  .homeHead{
+    flex: 0;  
+    padding: 0;
+  }
 }
+
+@media screen and (max-width:330px) and (min-width:320px){
+    .rightPage1 {
+    min-height: 60% !important;
+    padding-right: 90px !important;
+    .inp2{
+      width:60% !important;
+      margin-right: 20px !important;
+    }
+    
+  }
+  .kkk{
+    padding-right: 50px !important;
+    .imgCard1{
+      margin: 10px 45px 10px 30px;
+    }
+  }
+}
+
+
+
 `;
 export { Home };

@@ -62,7 +62,7 @@ const MainW = styled.div`
         background: #2D303E;
 
     }
-    
+
     @media screen and (max-width:600px){
         &{
             display: block;
@@ -84,7 +84,7 @@ const MainW = styled.div`
 
     }
     .rightPage{
-        flex: 1;
+        flex: 0;
         min-width: 100% !important;
         background: #2D303E;
 

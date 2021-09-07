@@ -76,7 +76,7 @@ export default function SimpleTabs() {
             <Tab label="Dessert" {...a11yProps(5)} />
           </Tabs>
         </AppBar>
-        <div className='d-flex justify-content-between onTop'>
+        <div className='onTop onTop2'>
           <p className='onTop'>Choose Dishes</p>
           <button className='btn btnTop'>Dine In</button>
 
