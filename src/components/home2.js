@@ -64,44 +64,44 @@ export default function SimpleTabs() {
   };
 
   return (
-   <div className="container">
+    <div className="container kkk">
       <div className={classes.root}>
-      <AppBar position="static">
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-          <Tab label="Hot Dishes" {...a11yProps(0)} />
-          <Tab label="Cold Dishes" {...a11yProps(1)} />
-          <Tab label="Soup" {...a11yProps(2)} />
-          <Tab label="Grill" {...a11yProps(3)} />
-          <Tab label="Appetizer" {...a11yProps(4)} />
-          <Tab label="Dessert" {...a11yProps(5)} />
-        </Tabs>
-      </AppBar>
-      <div className='d-flex justify-content-between onTop'>
-        <p className='onTop'>Choose Dishes</p>
-        <button className='btn btnTop'>Dine In</button>
+        <AppBar position="static">
+          <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
+            <Tab label="Hot Dishes" {...a11yProps(0)} />
+            <Tab label="Cold Dishes" {...a11yProps(1)} />
+            <Tab label="Soup" {...a11yProps(2)} />
+            <Tab label="Grill" {...a11yProps(3)} />
+            <Tab label="Appetizer" {...a11yProps(4)} />
+            <Tab label="Dessert" {...a11yProps(5)} />
+          </Tabs>
+        </AppBar>
+        <div className='onTop onTop2'>
+          <p className='onTop'>Choose Dishes</p>
+          <button className='btn btnTop'>Dine In</button>
 
+        </div>
+
+        <TabPanel value={value} index={0}>
+          <ColdDish></ColdDish>
+
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <Cold></Cold>
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          <Soup></Soup>
+        </TabPanel>
+        <TabPanel value={value} index={3}>
+          <Grill></Grill>
+        </TabPanel>
+        <TabPanel value={value} index={4}>
+          Item Three
+        </TabPanel>
+        <TabPanel value={value} index={5}>
+          Item Three
+        </TabPanel>
       </div>
-    
-      <TabPanel value={value} index={0}>
-        <ColdDish></ColdDish>
-      
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-       <Cold></Cold>
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <Soup></Soup>
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        <Grill></Grill>
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        Item Three
-      </TabPanel>
-      <TabPanel value={value} index={5}>
-        Item Three
-      </TabPanel>
     </div>
-   </div>
   );
 }
