@@ -1,7 +1,6 @@
 import React from "react";
 import All from "./components/all";
 import Home from "./pages/home";
-import Orders from "./pages/orders";
 import Tel from "./pages/tel";
 import { useParams } from "react-router-dom";
 import Settings from "./pages/settings";
@@ -15,21 +14,15 @@ const Dpages = () => {
     switch (pages) {
       case "home":
         return <Home />;
-        break;
-      case "orders":
-        return <Orders />;
-        break;
 
       case "settings":
         return <Settings />;
-        break;
+
       case "dashboards":
         return <Dashboards />;
-        break;
 
       case "tel":
         return <Tel />;
-        break;
 
       default:
         return <Error />;
