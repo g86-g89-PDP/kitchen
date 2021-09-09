@@ -15,7 +15,7 @@ import {
   TableCell,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import {Home} from './../styleW/homeW'
+import { Home } from './../styleW/homeW'
 
 const useStyles = makeStyles({
   table: {
@@ -77,7 +77,8 @@ const data = [
     iconToo: <AiOutlineArrowUp />,
     price: "$10,243.00",
     title: "Total Revenue",
-    color:"#50D1AA"
+    color:"#50D1AA",
+    colorToo: "#9288E0",
   },
   {
     icon:  <VscComment />,
@@ -85,7 +86,8 @@ const data = [
     iconToo: <AiOutlineArrowUp />,
     price: "$10,243.00",
     title: "Total Revenue",
-    color:"#50D1AA"
+    color:"#FF7CA3",
+    colorToo: "#FFB572",
   },
   {
     icon:  <VscComment />,
@@ -93,7 +95,8 @@ const data = [
     iconToo: <AiOutlineArrowUp />,
     price: "$10,243.00",
     title: "Total Revenue",
-    color:"#50D1AA"
+    color:"#50D1AA",
+    colorToo: "#65B0F6",
   }
 ]
 
@@ -116,15 +119,20 @@ const Dashboards = () => {
                             <div className="col-md-4">
                               <div className="summery-card">
                                 <div className="card-header">
-                                  <div className="head1 d-flex align-item-center justify-content-around">
-                                    {v.icon}
-                                    <h6 className="text-center">{v.pratcent}</h6>
-                                    {v.iconToo}
+                                  <div className="head1 d-flex align-items-center justify-content-around">
+                                    <div className="strelka" style={{color:v.colorToo}}>
+                                      {v.icon}
+                                    </div>
+                                    <h6 className="text-center" style={{color:v.color}}>{v.pratcent}</h6>
+                                    <div style={{color:v.color}}>
+                                      {v.iconToo}
+                                    </div>
+                                    
                                   </div>
                                 </div>
                                 <div className="card-body">
                                   <h3>{v.price}</h3>
-                                  <p>{v.title}</p>
+                                  <p className="titleColor">{v.title}</p>
                                 </div>
                               </div>
                             </div>
@@ -144,55 +152,19 @@ const Dashboards = () => {
                       <h3>$10,243.00</h3>
                       <p>Total Revinue</p>
                     </div> */}
-                  
-                
-
-              <div className="col-md-4">
-                <div >
-                  <div className="summery-card">
-                    <div className="card-header">
-                      <div className="head1 d-flex align-item-center justify-content-around">
-                        <VscComment />
-                        <h6 className="text-center">+32.40</h6>
-                        <AiOutlineArrowDown />
-                      </div>
-                    </div>
-                    <div className="card-body">
-                      <h3>$10,243.00</h3>
-                      <p>Total Revinue</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div>
-                  <div className="summery-card">
-                    <div className="card-header">
-                      <div className="head1 d-flex align-item-center justify-content-around">
-                        <RiContactsLine />
-                        <h6 className="text-center">+32.40</h6>
-                        <AiOutlineArrowUp />
-                      </div>
-                    </div>
-                    <div className="card-body">
-                      <h3>$10,243.00</h3>
-                      <p>Total Revinue</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
             <div className="row mt-4">
               <div className="col-12">
-                <div className="card">
+                <div className="card TableBody">
                   <div className="card-header">
                     <div className="d-flex justify-content-between">
                       <h6>Order Report</h6>
-                      <button className="btn ">Order filter</button>
+                      <button className="btn text-light">Order filter</button>
                     </div>
                   </div>
-                  <div className="card-body">
-                    <Table className="table">
+                  <div className="l">
+                    <Table className='TableBody'>
                       <TableHead>
                         <TableRow className="">
                           <TableCell className="text-white">Customer</TableCell>
@@ -204,7 +176,7 @@ const Dashboards = () => {
                         </TableRow>
                       </TableHead>
 
-                      <TableBody>
+                      <TableBody className='TableBody'>
                         {rows.map((row) => (
                           <TableRow key={row.name}>
                             <TableCell
@@ -224,7 +196,7 @@ const Dashboards = () => {
                               {row.carbs}
                             </TableCell>
                             <TableCell className="butt text-white">
-                              <button className="Completed">
+                              <button className="btn btnDark">
                                 {row.protein}
                               </button>
                             </TableCell>
@@ -245,21 +217,21 @@ const Dashboards = () => {
                 <div className="card-body">
                   <ul>
                     <li className="d-flex">
-                      <img src="/lagmon.jpg" alt="" className="img1" />
+                      <img src="/lagmon.jpg" alt="" className="client" />
                       <div>
                         <h6>Spicy seasoned seafood noodles</h6>
                         <p>200 dishes ordered</p>
                       </div>
                     </li>
                     <li className="d-flex">
-                      <img src="/lagmon2.jpg" alt="" className="img1" />
+                      <img src="/lagmon2.jpg" alt="" className="client" />
                       <div>
                         <h6>Spicy seasoned seafood noodles</h6>
                         <p>200 dishes ordered</p>
                       </div>
                     </li>
                     <li className="d-flex">
-                      <img src="/pilvin.jpg" alt="" className="img1" />
+                      <img src="/pilvin.jpg" alt="" className="client" />
                       <div>
                         <h6>Spicy seasoned seafood noodles</h6>
                         <p>200 dishes ordered</p>

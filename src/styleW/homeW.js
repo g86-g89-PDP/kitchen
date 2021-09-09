@@ -99,7 +99,7 @@ const Home = styled.div`
   }
  
   .imgCard1 {
-    margin: 10px 50px 10px 50px;
+    margin: 10px 20px 10px 20px;
     padding: 20px 0 0 0;
     position: relative;
     .imgCard2 {
@@ -301,9 +301,21 @@ const Home = styled.div`
   .kkk{
     padding-right: 50px !important;
     .imgCard1{
-      margin: 10px 45px 10px 30px;
+      margin: 10px 30px 10px 10px;
     }
   }
+}
+.client{
+  width: 50px;
+  height:50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin:5px;
+}
+.TableBody{
+  background: #1F1D2B;
+  border-radius: 8px;
+
 }
 
   /* dashboard styles */
@@ -318,6 +330,18 @@ const Home = styled.div`
     background-color: #1F1D2B;
     color: white;
     border-radius: 15px;
+  }
+  .titleColor{
+    color: #ABBBC2;
+  }
+  .strelka{
+    width: 38px;
+    height: 38px;
+    background-color: #252836;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
   }
 
 `;
