@@ -121,8 +121,6 @@ h6 {
 .MuiTabs-scroller {
   overflow-x: scroll !important;
 }
-<<<<<<< HEAD
-=======
 
 .MuiTabs-scroller {
   background-color: #2d303e;
@@ -148,4 +146,3 @@ h6 {
   display: block !important;
   width: 3px !important;
 }
->>>>>>> eafaef1b0286ebf3aee7023754e32908876b93f1

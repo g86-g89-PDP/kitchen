@@ -99,7 +99,7 @@ const Home = styled.div`
   }
  
   .imgCard1 {
-    margin: 10px 50px 10px 50px;
+    margin: 10px 20px 10px 20px;
     padding: 20px 0 0 0;
     position: relative;
     .imgCard2 {
@@ -301,7 +301,7 @@ const Home = styled.div`
   .kkk{
     padding-right: 50px !important;
     .imgCard1{
-      margin: 10px 45px 10px 30px;
+      margin: 10px 30px 10px 10px;
     }
   }
 }
