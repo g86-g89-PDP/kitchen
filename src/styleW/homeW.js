@@ -306,7 +306,19 @@ const Home = styled.div`
   }
 }
 
-
+  /* dashboard styles */
+  .img1{
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .summery-card{
+    background-color: #1F1D2B;
+    color: white;
+    border-radius: 15px;
+  }
 
 `;
 export { Home };

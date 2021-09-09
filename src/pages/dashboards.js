@@ -70,6 +70,33 @@ const rows = [
   ),
 ];
 
+const data = [
+  {
+    icon: <AiOutlineDollarCircle />,
+    pratcent: "+32.40",
+    iconToo: <AiOutlineArrowUp />,
+    price: "$10,243.00",
+    title: "Total Revenue",
+    color:"#50D1AA"
+  },
+  {
+    icon:  <VscComment />,
+    pratcent: "+32.40",
+    iconToo: <AiOutlineArrowUp />,
+    price: "$10,243.00",
+    title: "Total Revenue",
+    color:"#50D1AA"
+  },
+  {
+    icon:  <VscComment />,
+    pratcent: "+32.40",
+    iconToo: <AiOutlineArrowUp />,
+    price: "$10,243.00",
+    title: "Total Revenue",
+    color:"#50D1AA"
+  }
+]
+
 const Dashboards = () => {
   const classes = useStyles();
 
@@ -79,10 +106,34 @@ const Dashboards = () => {
         <div className="row">
           <div className="col-lg-8 mt-3">
             <div className="row">
-              <div className="col-md-4">
-                <div className="card">
-                  <div className="summery-card">
-                    <div className="card-header">
+          
+               
+                  
+                    {
+                      data.map((v)=>{
+                        return(
+                        <>
+                            <div className="col-md-4">
+                              <div className="summery-card">
+                                <div className="card-header">
+                                  <div className="head1 d-flex align-item-center justify-content-around">
+                                    {v.icon}
+                                    <h6 className="text-center">{v.pratcent}</h6>
+                                    {v.iconToo}
+                                  </div>
+                                </div>
+                                <div className="card-body">
+                                  <h3>{v.price}</h3>
+                                  <p>{v.title}</p>
+                                </div>
+                              </div>
+                            </div>
+                        </>
+                          
+                        )
+                      })
+                    }
+                    {/* <div className="card-header">
                       <div className="head1 d-flex align-item-center justify-content-around">
                         <AiOutlineDollarCircle />
                         <h6 className="text-center">+32.40</h6>
@@ -92,13 +143,12 @@ const Dashboards = () => {
                     <div className="card-body">
                       <h3>$10,243.00</h3>
                       <p>Total Revinue</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                    </div> */}
+                  
+                
 
               <div className="col-md-4">
-                <div className="card">
+                <div >
                   <div className="summery-card">
                     <div className="card-header">
                       <div className="head1 d-flex align-item-center justify-content-around">
@@ -115,7 +165,7 @@ const Dashboards = () => {
                 </div>
               </div>
               <div className="col-md-4">
-                <div className="card">
+                <div>
                   <div className="summery-card">
                     <div className="card-header">
                       <div className="head1 d-flex align-item-center justify-content-around">
