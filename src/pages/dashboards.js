@@ -16,6 +16,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Home } from './../styleW/homeW'
+import { Doughnut } from 'react-chartjs-2';
 
 const useStyles = makeStyles({
   table: {
@@ -72,7 +73,11 @@ const rows = [
 
 
 
+
 const Dashboards = () => {
+
+
+
   const classes = useStyles();
 
   return (
@@ -192,7 +197,7 @@ const Dashboards = () => {
 
           <div className="col-lg-4 mt-3">
             <div className="row">
-              <div className="card">
+              <div className="TableBody">
                 <div className="card-header">right</div>
                 <div className="card-body">
                   <ul>
@@ -219,12 +224,12 @@ const Dashboards = () => {
                     </li>
                   </ul>
 
-                  <button className="w-100">View All</button>
+                  <button className="w-100 btn btnDark">View All</button>
                 </div>
               </div>
             </div>
             <div className="row mt-3">
-              <div className="card">
+              <div className="TableBody">
                 <div className="card-header d-flex justify-content-between">
                   <h5>Most Type Of Order</h5>
                   <h6>Today</h6>
@@ -249,14 +254,11 @@ const Dashboards = () => {
                       </svg>
                     </div>
                     <div className="col-lg-6">
-                      <ul>
-                        <li>Dine in</li>
-                        <li>Dine in</li>
-                        <li>Dine in</li>
-                      </ul>
+                      <Doughnut data={...} />
+
                     </div>
                   </div>
-                  <button className="w-100">View All</button>
+                  <button className="w-100 btn btnDark">View All</button>
                 </div>
               </div>
             </div>

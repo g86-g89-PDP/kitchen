@@ -315,6 +315,7 @@ const Home = styled.div`
 .TableBody{
   background: #1F1D2B;
   border-radius: 8px;
+  color: white;
 
 }
 
