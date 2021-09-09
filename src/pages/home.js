@@ -89,7 +89,7 @@ const Homes = (props) => {
         <p className="topWord">Orders #34562</p>
         <div className="d-flex justif-content-start">
           <div className="d-flex">
-            <button className="btn btnLight mb-3">Dine In</button>
+            <button className="btn btnDark mb-3">Dine In</button>
             <button className="btn btnDark mb-3">To Go</button>
 
             {/* Payment start */}
@@ -273,12 +273,12 @@ const Homes = (props) => {
                   </div>
                 </div>
               </SideSheet>
-              <Button
-                className="btn btnDark mb-3"
+              <button
+                className="btn btnDark mb-2"
                 onClick={() => setIsShown(true)}
               >
                 Payment
-              </Button>
+              </button>
             </div>
             {/* Payment end */}
           </div>

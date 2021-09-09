@@ -4,8 +4,6 @@ import { MainW } from "../styleW/allWrapper";
 import { AiOutlineHome, AiOutlineSetting } from "react-icons/ai";
 import { IoIosAddCircleOutline, IoIosBarcode } from "react-icons/io";
 
-
-
 const Header = () => {
   return (
     <MainW>
@@ -14,29 +12,28 @@ const Header = () => {
           <ul>
             <li>
               <Link to="/">
-                <div className='dashboardSm'>
-                  <p><AiOutlineHome /></p>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link to="/orders">
                 <div className="dashboardSm">
-                  <p><IoIosAddCircleOutline /></p>
+                  <p>
+                    <AiOutlineHome />
+                  </p>
                 </div>
               </Link>
             </li>
             <li>
               <Link to="/settings">
-                <div className='dashboardSm'>
-                  <p><AiOutlineSetting /></p>
+                <div className="dashboardSm">
+                  <p>
+                    <AiOutlineSetting />
+                  </p>
                 </div>
               </Link>
             </li>
             <li>
               <Link to="/dashboards">
                 <div className="dashboardSm">
-                  <p><IoIosBarcode /></p>
+                  <p>
+                    <IoIosBarcode />
+                  </p>
                 </div>
               </Link>
             </li>
