@@ -12,41 +12,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faPaypal } from "@fortawesome/free-brands-svg-icons";
 
-const confirmation = [
-  {
-    id: "2",
-    img: "https://pinchofyum.com/wp-content/uploads/Healing-Chicken-and-Rice-Soup-Square.jpg",
-    title: "Spicy seasoned sea...",
-    price: "$ 2.29",
-    subprice: "$ 4,58",
-    placeholder: "Order Note...",
-  },
-  {
-    id: "1",
-    img: "https://uploads-ssl.webflow.com/598a208f22e8860001acd449/5dc70282c1b1603712682357_Lemon-Chicken-Soup-Square.jpg",
-    title: "Salted pasta with mu...",
-    price: "$ 2.69",
-    subprice: "$ 2.69",
-    placeholder: "Order Note...",
-  },
-  {
-    id: "3",
-    img: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2019%2F02%2F26%2Flemony-greek-chicken-soup-1811-p16-2000.jpg",
-    title: "Spicy instant noodle...",
-    price: "$ 2.29",
-    subprice: "$ 4,58",
-    placeholder: "Order Note...",
-  },
-  {
-    id: "1",
-    img: "https://simply-delicious-food.com/wp-content/uploads/2018/01/easy-vegetable-soup-1.jpg",
-    title: "Healthy noodle with ...",
-    price: "$ 2.29",
-    subprice: "$ 4,58",
-    placeholder: "Order Note...",
-  },
-];
-
 const Homes = (props) => {
   const dispatch = useDispatch();
   const selected = useSelector((state) => state.selected);
@@ -117,7 +82,7 @@ const Homes = (props) => {
                           <small className="text-muted">Orders #34562</small>
                         </div>
                         <div className="bord">
-                          {confirmation.map((v, i) => {
+                          {selected.map((v, i) => {
                             return (
                               <div key={i}>
                                 <div className="d-flex">
