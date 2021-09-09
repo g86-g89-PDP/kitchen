@@ -71,7 +71,35 @@ const rows = [
   ),
 ];
 
-
+const data = [
+  {
+    icon: <AiOutlineDollarCircle />,
+    pratcent: "+32.40",
+    iconToo: <AiOutlineArrowUp />,
+    price: "$10,243.00",
+    title: "Total Revenue",
+    color:"#50D1AA",
+    colorToo: "#9288E0",
+  },
+  {
+    icon:  <VscComment />,
+    pratcent: "+32.40",
+    iconToo: <AiOutlineArrowUp />,
+    price: "$10,243.00",
+    title: "Total Revenue",
+    color:"#FF7CA3",
+    colorToo: "#FFB572",
+  },
+  {
+    icon:  <VscComment />,
+    pratcent: "+32.40",
+    iconToo: <AiOutlineArrowUp />,
+    price: "$10,243.00",
+    title: "Total Revenue",
+    color:"#50D1AA",
+    colorToo: "#65B0F6",
+  }
+]
 
 
 const Dashboards = () => {
@@ -86,10 +114,39 @@ const Dashboards = () => {
         <div className="row">
           <div className="col-lg-8 mt-3">
             <div className="row">
-              <div className="col-md-4">
-                <div className="card">
-                  <div className="summery-card">
-                    <div className="card-header">
+          
+               
+                  
+                    {
+                      data.map((v)=>{
+                        return(
+                        <>
+                            <div className="col-md-4">
+                              <div className="summery-card">
+                                <div className="card-header">
+                                  <div className="head1 d-flex align-items-center justify-content-around">
+                                    <div className="strelka" style={{color:v.colorToo}}>
+                                      {v.icon}
+                                    </div>
+                                    <h6 className="text-center" style={{color:v.color}}>{v.pratcent}</h6>
+                                    <div style={{color:v.color}}>
+                                      {v.iconToo}
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                                <div className="card-body">
+                                  <h3>{v.price}</h3>
+                                  <p className="titleColor">{v.title}</p>
+                                </div>
+                              </div>
+                            </div>
+                        </>
+                          
+                        )
+                      })
+                    }
+                    {/* <div className="card-header">
                       <div className="head1 d-flex align-item-center justify-content-around">
                         <AiOutlineDollarCircle />
                         <h6 className="text-center">+32.40</h6>
@@ -99,45 +156,8 @@ const Dashboards = () => {
                     <div className="card-body">
                       <h3>$10,243.00</h3>
                       <p>Total Revinue</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-4">
-                <div className="card">
-                  <div className="summery-card">
-                    <div className="card-header">
-                      <div className="head1 d-flex align-item-center justify-content-around">
-                        <VscComment />
-                        <h6 className="text-center">+32.40</h6>
-                        <AiOutlineArrowDown />
-                      </div>
-                    </div>
-                    <div className="card-body">
-                      <h3>$10,243.00</h3>
-                      <p>Total Revinue</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="card">
-                  <div className="summery-card">
-                    <div className="card-header">
-                      <div className="head1 d-flex align-item-center justify-content-around">
-                        <RiContactsLine />
-                        <h6 className="text-center">+32.40</h6>
-                        <AiOutlineArrowUp />
-                      </div>
-                    </div>
-                    <div className="card-body">
-                      <h3>$10,243.00</h3>
-                      <p>Total Revinue</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                    </div> */}
+              
             </div>
             <div className="row mt-4">
               <div className="col-12">
