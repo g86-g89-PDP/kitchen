@@ -81,8 +81,8 @@ const Homes = (props) => {
                           </div>
                           <small className="text-muted">Orders #34562</small>
                         </div>
-                        <div className="bord">
-                          {selected.map((v, i) => {
+                        <div className="todoAppCard">
+                          {selected?.map((v, i) => {
                             return (
                               <div key={i}>
                                 <div className="d-flex">
@@ -95,15 +95,21 @@ const Homes = (props) => {
                                           alt="not photo"
                                         />
                                         <div>
-                                          <p className="mb-0">{v.title}</p>
+                                          <p className="mb-0">{v.name}</p>
                                           <small className="text-muted">
                                             {v.price}
                                           </small>
                                         </div>
                                       </div>
-                                      <div className="div me-3">{v.id}</div>
+                                      <div className="todoInput me-3">
+                                        <input
+                                          type="text"
+                                          placeholder="2"
+                                          className="inp"
+                                        />
+                                      </div>
                                       <p className="d-flex justify-content-center align-items-center">
-                                        {v.subprice}
+                                        {v.price2}
                                       </p>
                                     </div>
 
@@ -111,7 +117,7 @@ const Homes = (props) => {
                                       <input
                                         type="text"
                                         className="input pe-5"
-                                        placeholder={v.placeholder}
+                                        placeholder={v.value}
                                       />
                                       <button
                                         className="btn delete"
