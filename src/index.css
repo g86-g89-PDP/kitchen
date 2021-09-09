@@ -23,16 +23,16 @@ h3 {
   border-radius: 100%;
 }
 
-.div {
-  width: 48px;
-  height: 48px;
+.inp {
+  width: 40px;
+  height: 40px;
   background: #2d303e;
   border: 1px solid #393c49;
   box-sizing: border-box;
   border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 5px;
+  color: white;
+  text-align: center;
 }
 
 .plus {
@@ -111,6 +111,17 @@ h6 {
 
 .icons {
   color: #ea7c69 !important;
+}
+
+.inp {
+  width: 40px;
+  height: 40px;
+  background: #2d303e;
+  border: 1px solid #393c49;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 5px;
+  color: white;
 }
 
 .ub-bg-clr_white {
