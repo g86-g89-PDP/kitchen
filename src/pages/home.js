@@ -49,7 +49,7 @@ const confirmation = [
 
 const Homes = (props) => {
   const dispatch = useDispatch();
-  const dine = useSelector((state) => state.dine);
+  const selected = useSelector((state) => state.selected);
 
   const Delet = (i) => {
     const action = { type: "DELETE", payload: i };
@@ -292,7 +292,7 @@ const Homes = (props) => {
         </div>
         <div className="todoAppCard">
           {/* boshlanish */}
-          {dine?.map((v, i) => {
+          {selected?.map((v, i) => {
             return (
               <div key={i}>
                 <div className="d-flex p-2 align-items-center">

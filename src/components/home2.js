@@ -6,10 +6,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import ColdDish from '../meals/hot';
-import Cold from '../meals/cold';
-import Soup from '../meals/soup';
-import Grill from '../meals/grill';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 
@@ -58,9 +55,17 @@ const useStyles = makeStyles((theme) => ({
 export default function SimpleTabs() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
+  const dispatch = useDispatch();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+  };
+  const meals = useSelector(state => state.meals);
+
+
+  const Add = (meal) => {
+    const action = { type: "ADD", payload: meal };
+    dispatch(action);
   };
 
   return (
@@ -81,8 +86,36 @@ export default function SimpleTabs() {
           <button className='btn btnTop'>Dine In</button>
 
         </div>
+        {
+          meals.map((v, i) => (
+            <TabPanel value={value} index={i} key={v}>
+              <div className="row">
+                {v.data.map((taom, index) => {
+                  return <div className="col-lg-4 col-md-6 col-sm-12  ps-0" key={i}>
+                    <div className='imgCard1'>
+                      <div className='imgCard2'>
+                        <img src={taom.img} alt="" className='Img' />
 
-        <TabPanel value={value} index={0}>
+                        <div className='infMeal'>
+                          <p className='imgword1 text-center'>{taom.name}</p>
+                          <p className='imgword1 mb-0 pb-0'>{taom.price}</p>
+                          <p className='imgword2 mt-0 mb-0'>20 Bowls available</p>
+                          <p><button className='deleteBtn pt-0 pb-0' onClick={() => Add(taom)}>+</button></p>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                })}
+
+
+              </div>
+
+            </TabPanel>
+          ))
+        }
+
+        {/* <TabPanel value={value} index={0}>
           <ColdDish></ColdDish>
 
         </TabPanel>
@@ -100,7 +133,7 @@ export default function SimpleTabs() {
         </TabPanel>
         <TabPanel value={value} index={5}>
           Item Three
-        </TabPanel>
+        </TabPanel> */}
       </div>
     </div>
   );
