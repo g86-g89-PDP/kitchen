@@ -15,7 +15,7 @@ import {
   TableCell,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import {Home} from './../styleW/homeW'
+import { Home } from './../styleW/homeW'
 
 const useStyles = makeStyles({
   table: {
@@ -69,6 +69,8 @@ const rows = [
     "Completed"
   ),
 ];
+
+
 
 const Dashboards = () => {
   const classes = useStyles();
@@ -134,15 +136,15 @@ const Dashboards = () => {
             </div>
             <div className="row mt-4">
               <div className="col-12">
-                <div className="card">
+                <div className="card TableBody">
                   <div className="card-header">
                     <div className="d-flex justify-content-between">
                       <h6>Order Report</h6>
-                      <button className="btn ">Order filter</button>
+                      <button className="btn text-light">Order filter</button>
                     </div>
                   </div>
-                  <div className="card-body">
-                    <Table className="table">
+                  <div className="l">
+                    <Table className='TableBody'>
                       <TableHead>
                         <TableRow className="">
                           <TableCell className="text-white">Customer</TableCell>
@@ -154,7 +156,7 @@ const Dashboards = () => {
                         </TableRow>
                       </TableHead>
 
-                      <TableBody>
+                      <TableBody className='TableBody'>
                         {rows.map((row) => (
                           <TableRow key={row.name}>
                             <TableCell
@@ -174,7 +176,7 @@ const Dashboards = () => {
                               {row.carbs}
                             </TableCell>
                             <TableCell className="butt text-white">
-                              <button className="Completed">
+                              <button className="btn btnDark">
                                 {row.protein}
                               </button>
                             </TableCell>
@@ -195,21 +197,21 @@ const Dashboards = () => {
                 <div className="card-body">
                   <ul>
                     <li className="d-flex">
-                      <img src="/lagmon.jpg" alt="" className="img1" />
+                      <img src="/lagmon.jpg" alt="" className="client" />
                       <div>
                         <h6>Spicy seasoned seafood noodles</h6>
                         <p>200 dishes ordered</p>
                       </div>
                     </li>
                     <li className="d-flex">
-                      <img src="/lagmon2.jpg" alt="" className="img1" />
+                      <img src="/lagmon2.jpg" alt="" className="client" />
                       <div>
                         <h6>Spicy seasoned seafood noodles</h6>
                         <p>200 dishes ordered</p>
                       </div>
                     </li>
                     <li className="d-flex">
-                      <img src="/pilvin.jpg" alt="" className="img1" />
+                      <img src="/pilvin.jpg" alt="" className="client" />
                       <div>
                         <h6>Spicy seasoned seafood noodles</h6>
                         <p>200 dishes ordered</p>

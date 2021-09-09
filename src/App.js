@@ -15,9 +15,9 @@ function App() {
       <Provider store={store}>
         <Router>
           <Switch>
-            <Router path="/" exact>
+            <Route path="/" exact>
               <Redirect to="/home" />
-            </Router>
+            </Route>
 
             <Route path="/:pages">
               <Dpages />

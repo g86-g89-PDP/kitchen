@@ -305,6 +305,18 @@ const Home = styled.div`
     }
   }
 }
+.client{
+  width: 50px;
+  height:50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin:5px;
+}
+.TableBody{
+  background: #1F1D2B;
+  border-radius: 8px;
+
+}
 
 
 
