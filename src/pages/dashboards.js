@@ -15,6 +15,7 @@ import {
   TableCell,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import {Home} from './../styleW/homeW'
 
 const useStyles = makeStyles({
   table: {
@@ -73,7 +74,7 @@ const Dashboards = () => {
   const classes = useStyles();
 
   return (
-    <DashboardsWrapper>
+    <Home>
       <div className="container">
         <div className="row">
           <div className="col-lg-8 mt-3">
@@ -137,7 +138,7 @@ const Dashboards = () => {
                   <div className="card-header">
                     <div className="d-flex justify-content-between">
                       <h6>Order Report</h6>
-                      <button>Order filter</button>
+                      <button className="btn ">Order filter</button>
                     </div>
                   </div>
                   <div className="card-body">
@@ -260,7 +261,7 @@ const Dashboards = () => {
           </div>
         </div>
       </div>
-    </DashboardsWrapper>
+    </Home>
   );
 };
 

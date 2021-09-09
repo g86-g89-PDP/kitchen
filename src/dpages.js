@@ -14,10 +14,6 @@ const Dpages = () => {
     switch (pages) {
       case "home":
         return <Home />;
-<<<<<<< HEAD
-        break;
-=======
->>>>>>> eafaef1b0286ebf3aee7023754e32908876b93f1
 
       case "settings":
         return <Settings />;
