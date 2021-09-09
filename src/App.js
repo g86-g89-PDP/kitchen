@@ -4,30 +4,27 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import Dpages from "./dpages";
-import { Provider } from 'react-redux';
-import store from './redux/store';
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 function App() {
   return (
     <div>
-     
-       <Provider store={store}>
-          <Router>
-      <Switch>
-         <Route path="/" exact>
-           <Redirect to="/home"/>
-          </Route>
+      <Provider store={store}>
+        <Router>
+          <Switch>
+            <Router path="/" exact>
+              <Redirect to="/home" />
+            </Router>
 
-          <Route path="/:pages">
-            <Dpages/>
-          </Route>
-        </Switch>
+            <Route path="/:pages">
+              <Dpages />
+            </Route>
+          </Switch>
         </Router>
-       </Provider>
-     
-      
+      </Provider>
     </div>
   );
 }
