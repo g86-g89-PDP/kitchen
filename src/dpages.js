@@ -16,9 +16,6 @@ const Dpages = () => {
       case "home":
         return <Home />;
         break;
-      case "orders":
-        return <Orders />;
-        break;
 
       case "settings":
         return <Settings />;

@@ -114,26 +114,6 @@ export default function SimpleTabs() {
             </TabPanel>
           ))
         }
-
-        {/* <TabPanel value={value} index={0}>
-          <ColdDish></ColdDish>
-
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <Cold></Cold>
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          <Soup></Soup>
-        </TabPanel>
-        <TabPanel value={value} index={3}>
-          <Grill></Grill>
-        </TabPanel>
-        <TabPanel value={value} index={4}>
-          Item Three
-        </TabPanel>
-        <TabPanel value={value} index={5}>
-          Item Three
-        </TabPanel> */}
       </div>
     </div>
   );
