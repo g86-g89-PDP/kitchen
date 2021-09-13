@@ -5,6 +5,8 @@ import { AiOutlineHome, AiOutlineSetting } from "react-icons/ai";
 import { IoIosAddCircleOutline, IoIosBarcode } from "react-icons/io";
 
 const Header = () => {
+
+  const links = useParams();
   return (
     <MainW>
       <div>

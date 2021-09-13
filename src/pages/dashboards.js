@@ -78,25 +78,25 @@ const data = [
     iconToo: <AiOutlineArrowUp />,
     price: "$10,243.00",
     title: "Total Revenue",
-    color:"#50D1AA",
+    color: "#50D1AA",
     colorToo: "#9288E0",
   },
   {
-    icon:  <VscComment />,
+    icon: <VscComment />,
     pratcent: "+32.40",
     iconToo: <AiOutlineArrowUp />,
     price: "$10,243.00",
     title: "Total Revenue",
-    color:"#FF7CA3",
+    color: "#FF7CA3",
     colorToo: "#FFB572",
   },
   {
-    icon:  <VscComment />,
+    icon: <VscComment />,
     pratcent: "+32.40",
     iconToo: <AiOutlineArrowUp />,
     price: "$10,243.00",
     title: "Total Revenue",
-    color:"#50D1AA",
+    color: "#50D1AA",
     colorToo: "#65B0F6",
   }
 ]
@@ -114,39 +114,39 @@ const Dashboards = () => {
         <div className="row">
           <div className="col-lg-8 mt-3">
             <div className="row">
-          
-               
-                  
-                    {
-                      data.map((v)=>{
-                        return(
-                        <>
-                            <div className="col-md-4">
-                              <div className="summery-card">
-                                <div className="card-header">
-                                  <div className="head1 d-flex align-items-center justify-content-around">
-                                    <div className="strelka" style={{color:v.colorToo}}>
-                                      {v.icon}
-                                    </div>
-                                    <h6 className="text-center" style={{color:v.color}}>{v.pratcent}</h6>
-                                    <div style={{color:v.color}}>
-                                      {v.iconToo}
-                                    </div>
-                                    
-                                  </div>
-                                </div>
-                                <div className="card-body">
-                                  <h3>{v.price}</h3>
-                                  <p className="titleColor">{v.title}</p>
-                                </div>
+
+
+
+              {
+                data.map((v) => {
+                  return (
+                    <>
+                      <div className="col-md-4">
+                        <div className="summery-card">
+                          <div className="card-header">
+                            <div className="head1 d-flex align-items-center justify-content-around">
+                              <div className="strelka" style={{ color: v.colorToo }}>
+                                {v.icon}
                               </div>
+                              <h6 className="text-center" style={{ color: v.color }}>{v.pratcent}</h6>
+                              <div style={{ color: v.color }}>
+                                {v.iconToo}
+                              </div>
+
                             </div>
-                        </>
-                          
-                        )
-                      })
-                    }
-                    {/* <div className="card-header">
+                          </div>
+                          <div className="card-body">
+                            <h3>{v.price}</h3>
+                            <p className="titleColor">{v.title}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+
+                  )
+                })
+              }
+              {/* <div className="card-header">
                       <div className="head1 d-flex align-item-center justify-content-around">
                         <AiOutlineDollarCircle />
                         <h6 className="text-center">+32.40</h6>
@@ -157,7 +157,7 @@ const Dashboards = () => {
                       <h3>$10,243.00</h3>
                       <p>Total Revinue</p>
                     </div> */}
-              
+
             </div>
             <div className="row mt-4">
               <div className="col-12">
@@ -256,25 +256,10 @@ const Dashboards = () => {
                 </div>
                 <div className="card-body">
                   <div className="row">
-                    <div className="col-lg-6">
-                      <svg
-                        width="89"
-                        height="90"
-                        viewBox="0 0 89 90"
-                        fill="none"
-                        xmlns="https://ak.picdn.net/shutterstock/videos/1010674277/thumb/1.jpg"
-                      >
-                        <circle
-                          opacity="0.1"
-                          cx="44.3582"
-                          cy="44.995"
-                          r="41.5012"
-                          fill="#1F1D2B"
-                        />
-                      </svg>
-                    </div>
-                    <div className="col-lg-6">
-                      <Doughnut data={...} />
+
+                    <div className="col-lg-12">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio nam ea vel id maiores corporis consectetur modi inventore odio, repudiandae quisquam placeat aliquam blanditiis alias, nisi natus laborum! Quia, labore.</p>
+
 
                     </div>
                   </div>
